@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ii-reddit-cookie-export"
+version = "0.1.0"
+description = "Export Reddit cookies from a local macOS Chrome profile"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Intelligent Iterations", email = "oss@intelligentiterations.com" }
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: MacOS :: MacOS X",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Internet :: WWW/HTTP :: Browsers"
+]
+dependencies = ["browser-cookie3==0.20.1"]
+
+[project.urls]
+Homepage = "https://github.com/intelligent-iterations/ii-reddit-cookie-export"
+Repository = "https://github.com/intelligent-iterations/ii-reddit-cookie-export"
+Issues = "https://github.com/intelligent-iterations/ii-reddit-cookie-export/issues"
+
+[project.scripts]
+ii-reddit-cookie-export = "ii_reddit_cookie_export.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
